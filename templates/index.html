@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plagiarism Detection</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        main {
+            margin: 2rem auto;
+            padding: 1rem;
+            width: 50%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="file"] {
+            margin: 1rem 0;
+            padding: 0.5rem;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #dark-mode-toggle {
+            background-color: transparent;
+            color: white;
+            font-size: 14px;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        #dark-mode-toggle:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        /* Dark Mode Styles */
+        body.dark {
+            background-color: #121212;
+            color: white;
+        }
+        main.dark {
+            background-color: #333;
+            color: white;
+        }
+        input[type="file"].dark {
+            background-color: #444;
+            color: white;
+            border: 1px solid white;
+        }
+        button.dark {
+            background-color: #0056b3;
+        }
+        button.dark:hover {
+            background-color: #007bff;
+        }
+        #dark-mode-toggle.dark {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        #dark-mode-toggle.dark:hover {
+            background-color: white;
+            color: #333;
+        }
+    </style>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (isDarkMode) {
+                enableDarkMode();
+            }
+        });
+
+        function enableDarkMode() {
+            document.body.classList.add('dark');
+            document.querySelector('main').classList.add('dark');
+            document.querySelector('input[type="file"]').classList.add('dark');
+            const button = document.getElementById('dark-mode-toggle');
+            if (button) button.classList.add('dark');
+            button.innerText = 'Light Mode';
+        }
+
+        function disableDarkMode() {
+            document.body.classList.remove('dark');
+            document.querySelector('main').classList.remove('dark');
+            document.querySelector('input[type="file"]').classList.remove('dark');
+            const button = document.getElementById('dark-mode-toggle');
+            if (button) button.classList.remove('dark');
+            button.innerText = 'Dark Mode';
+        }
+
+        function toggleDarkMode() {
+            const isDarkMode = document.body.classList.contains('dark');
+            if (isDarkMode) {
+                disableDarkMode();
+                localStorage.setItem('darkMode', 'false');
+            } else {
+                enableDarkMode();
+                localStorage.setItem('darkMode', 'true');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Web-Based Plagiarism Detection</h1>
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+    </header>
+    <main>
+        <h1>Upload Your Document</h1>
+        <form action="/analyze" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Analyze</button>
+        </form>
+    </main>
+</body>
+</html>
+

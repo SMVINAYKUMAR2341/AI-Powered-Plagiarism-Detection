@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.documentElement.classList.add('dark');
+    }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+        /* Default Light Mode Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        main {
+            margin: 2rem auto;
+            padding: 1rem;
+            width: 60%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .low {
+            border-left: 5px solid green;
+        }
+        .medium {
+            border-left: 5px solid orange;
+        }
+        .high {
+            border-left: 5px solid red;
+        }
+        .average-score {
+            margin-top: 2rem;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+        }
+        #dark-mode-toggle {
+            background-color: transparent;
+            color: white;
+            font-size: 14px;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        #dark-mode-toggle:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        /* Dark Mode Styles */
+        body.dark {
+            background-color: #121212;
+            color: white;
+        }
+        main.dark {
+            background-color: #333;
+            color: white;
+        }
+        ul.dark {
+            background-color: transparent;
+        }
+        li.dark {
+            background-color: #555;
+            color: white;
+        }
+        li.low.dark {
+            border-left: 5px solid lightgreen;
+        }
+        li.medium.dark {
+            border-left: 5px solid gold;
+        }
+        li.high.dark {
+            border-left: 5px solid tomato;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (isDarkMode) {
+                enableDarkMode();
+            }
+        });
+
+        function enableDarkMode() {
+            document.body.classList.add('dark');
+            document.querySelector('main').classList.add('dark');
+            document.querySelector('ul').classList.add('dark');
+            const listItems = document.querySelectorAll('li');
+            listItems.forEach(item => item.classList.add('dark'));
+            const button = document.getElementById('dark-mode-toggle');
+            if (button) button.classList.add('dark');
+            button.innerText = 'Light Mode';
+        }
+
+        function disableDarkMode() {
+            document.body.classList.remove('dark');
+            document.querySelector('main').classList.remove('dark');
+            document.querySelector('ul').classList.remove('dark');
+            const listItems = document.querySelectorAll('li');
+            listItems.forEach(item => item.classList.remove('dark'));
+            const button = document.getElementById('dark-mode-toggle');
+            if (button) button.classList.remove('dark');
+            button.innerText = 'Dark Mode';
+        }
+
+        function toggleDarkMode() {
+            const isDarkMode = document.body.classList.contains('dark');
+            if (isDarkMode) {
+                disableDarkMode();
+                localStorage.setItem('darkMode', 'false');
+            } else {
+                enableDarkMode();
+                localStorage.setItem('darkMode', 'true');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Results</h1>
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+    </header>
+    <main>
+        <h1>Plagiarism Detection Results</h1>
+        <ul>
+            {% for paragraph, score in results.items() %}
+                <li class="{% if score < 20 %}low{% elif score < 50 %}medium{% else %}high{% endif %}">
+                    <strong>Paragraph:</strong> {{ paragraph }}<br>
+                    <strong>Plagiarism Percentage:</strong> {{ score }}%
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="average-score">
+            Average Plagiarism Score: {{ average_score }}%
+        </div>
+    </main>
+</body>
+</html>
+
