@@ -115,13 +115,7 @@ If you use this project for academic purposes, please cite the IEEE paper:
 * [Sentence-BERT by UKP Lab](https://www.sbert.net/)
 * [Google Custom Search API](https://programmablesearchengine.google.com/)
 
----
 
-## 🔐 Disclaimer
-
-This tool is intended for **educational and research** use only. Accuracy may vary depending on the content and external data sources.
-
-```
 
 ---
 
