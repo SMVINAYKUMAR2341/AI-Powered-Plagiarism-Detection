@@ -61,7 +61,11 @@ flask run
 ```
 
 4. **Visit**
-   Open your browser and go to `http://localhost:5000`
+   Click the link that opens up within the browser.
+   Eg.
+```
+`http://localhost:5000`
+```
 
 ---
 
