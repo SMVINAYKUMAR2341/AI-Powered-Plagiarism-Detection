@@ -4,7 +4,7 @@
 
 ---
 
-```markdown
+
 # 🧠 AI-Powered Plagiarism Detection: A Web-Based System for Text Integrity
 
 This repository contains the source code and resources for a web-based plagiarism detection system that leverages AI/ML models to analyze text at the **paragraph level**. It is designed to provide real-time detection using **semantic similarity techniques**, dynamic web querying, and detailed heatmap-based reports.
@@ -40,45 +40,23 @@ This repository contains the source code and resources for a web-based plagiaris
 
 ---
 
-## 📂 Directory Structure
-
-```
-
-📁 ai-plagiarism-detector
-├── app.py                  # Flask backend
-├── templates/
-│   └── index.html          # Frontend UI
-├── static/
-│   └── styles.css          # Styling
-├── utils/
-│   ├── plagiarism\_check.py # Core AI logic
-│   └── web\_search.py       # Web query logic
-├── models/
-│   └── sentence\_bert.pkl   # Serialized ML model
-├── requirements.txt        # Python dependencies
-└── README.md               # Project info
-
-````
-
----
-
 ## ⚙️ Installation & Setup
 
 1. **Clone the Repository**
-```bash
+```
 git clone https://github.com/yourusername/ai-plagiarism-detector.git
 cd ai-plagiarism-detector
-````
+```
 
 2. **Install Dependencies**
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
 3. **Run the App**
 
-```bash
+```
 python app.py
 ```
 
@@ -115,8 +93,3 @@ If you use this project for academic purposes, please cite the IEEE paper:
 * [Google Custom Search API](https://programmablesearchengine.google.com/)
 
 
-
----
-
-Let me know if you'd like this in `.md` file format directly or want me to help create `requirements.txt`, a sample Flask structure, or deployment guide too.
-```
