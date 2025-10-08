@@ -42,8 +42,8 @@ This repository contains the source code and resources for a web-based plagiaris
 
 1. **Clone the Repository**
 ```
-git clone https://github.com/yourusername/ai-plagiarism-detector.git
-cd ai-plagiarism-detector
+git clone https://github.com/SMVINAYKUMAR2341/AI-Powered-Plagiarism-Detection.git
+cd AI-Powered-Plagiarism-Detection
 ```
 
 2. **Install Dependencies**
@@ -52,8 +52,8 @@ cd ai-plagiarism-detector
 pip install -r requirements.txt
 ```
 
-3. **Replace the API keys and search engine ID**
-   Because this project uses google's search api, it requires an API key and a search engine ID. These are hardcoded in the model itself so we recomend that you add your keys in 'model.py', line 77 & 78.
+3. **Replace the API keys and search engine ID**<br>
+Because this project uses google's search API, it requires an API key and a search engine ID. These are hardcoded in the model itself so we recomend that you add your keys in 'model.py', line 77 & 78.
 ```
 ....
 results = {}
@@ -63,17 +63,17 @@ cx = # Replace with your search engine ID
 print(f"Total paragraphs: {len(paragraphs)}")
 ....
 ```   
-5. **Run the App**
-   Within the folder, open your command prompt/terminal, and run the following:
+5. **Run the App**<br>
+Within the folder, open your command prompt/terminal, and run the following:
 
 ```
 export FLASK_APP=app
 flask run
 ```
 
-5. **Visit**
-   Click the link that opens up within the browser.
-   Eg.
+5. **Visit**<br>
+Click the link that opens up within the browser.
+Eg.
 ```
 `http://localhost:5000`
 ```
