@@ -5,27 +5,27 @@
 ---
 
 
-# 🧠 AI-Powered Plagiarism Detection: A Web-Based System for Text Integrity
+# AI-Powered Plagiarism Detection: A Web-Based System for Text Integrity
 
 This repository contains the source code and resources for a web-based plagiarism detection system that leverages AI/ML models to analyze text at the **paragraph level**. It is designed to provide real-time detection using **semantic similarity techniques**, dynamic web querying, and detailed heatmap-based reports.
 
-## 🔍 Project Highlights
+## Project Highlights
 
-- ✅ **Paragraph-Level Analysis**
-- 🌐 **Real-Time Web Search via Google APIs**
-- 🤖 **AI & ML-based Detection using Sentence-BERT**
-- 📊 **Similarity Scoring using Cosine Similarity**
-- 💻 **Flask Web Interface for Document Uploads**
+-  **Paragraph-Level Analysis**
+-  **Real-Time Web Search via Google APIs**
+-  **AI & ML-based Detection using Sentence-BERT**
+-  **Similarity Scoring using Cosine Similarity**
+-  **Flask Web Interface for Document Uploads**
 
 ---
 
-## 🚀 Demo
+## Paper link
 
 🔗 [IEEE Paper Link](https://ieeexplore.ieee.org/document/11036044)
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Component         | Technology                         |
 |-------------------|------------------------------------|
@@ -33,12 +33,12 @@ This repository contains the source code and resources for a web-based plagiaris
 | AI Model          | Sentence-BERT, Scikit-learn        |
 | Similarity Check  | Cosine Similarity                  |
 | Web Search API    | Google Custom Search API           |
-| Frontend          | HTML/CSS, Jinja2                   |
+| Frontend          | HTML/CSS, Django                   |
 | Deployment        | Localhost / Cloud-ready (GCP, AWS) |
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 1. **Clone the Repository**
 ```
@@ -69,7 +69,7 @@ flask run
 
 ---
 
-## 📈 Features
+## Features
 
 * **Upload Text** for checking
 * **Paragraph-wise Scores** with matching URLs
@@ -77,7 +77,7 @@ flask run
 
 ---
 
-## 📚 Citation
+## Citation
 
 If you use this project for academic purposes, please cite the IEEE paper:
 
@@ -88,7 +88,7 @@ If you use this project for academic purposes, please cite the IEEE paper:
 
 ---
 
-## ❤️ Acknowledgements
+## Acknowledgements
 
 * [IEEE Xplore](https://ieeexplore.ieee.org/)
 * [Sentence-BERT by UKP Lab](https://www.sbert.net/)
