@@ -1,4 +1,4 @@
-# AI-Powered-Plagiarism-Detection
+# AI Powered Plagiarism Detection
 
 **"AI-Powered Plagiarism Detection: A Web-Based System for Text Integrity"**
 
@@ -52,7 +52,18 @@ cd ai-plagiarism-detector
 pip install -r requirements.txt
 ```
 
-3. **Run the App**
+3. **Replace the API keys and search engine ID**
+   Because this project uses google's search api, it requires an API key and a search engine ID. These are hardcoded in the model itself so we recomend that you add your keys in 'model.py', line 77 & 78.
+```
+....
+results = {}
+api_key = # Replace with your API key 
+cx = # Replace with your search engine ID
+
+print(f"Total paragraphs: {len(paragraphs)}")
+....
+```   
+5. **Run the App**
    Within the folder, open your command prompt/terminal, and run the following:
 
 ```
@@ -60,7 +71,7 @@ export FLASK_APP=app
 flask run
 ```
 
-4. **Visit**
+5. **Visit**
    Click the link that opens up within the browser.
    Eg.
 ```
