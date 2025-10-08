@@ -12,11 +12,9 @@ This repository contains the source code and resources for a web-based plagiaris
 ## 🔍 Project Highlights
 
 - ✅ **Paragraph-Level Analysis**
-- 🌐 **Real-Time Web Search via APIs**
+- 🌐 **Real-Time Web Search via Google APIs**
 - 🤖 **AI & ML-based Detection using Sentence-BERT**
 - 📊 **Similarity Scoring using Cosine Similarity**
-- 📈 **Heatmap Reports & Color-Coded Feedback**
-- 📝 **Citation Checking & Recommendations**
 - 💻 **Flask Web Interface for Document Uploads**
 
 ---
@@ -29,13 +27,13 @@ This repository contains the source code and resources for a web-based plagiaris
 
 ## 🧰 Tech Stack
 
-| Component         | Technology            |
-|------------------|------------------------|
-| Backend           | Python, Flask          |
-| AI Model          | Sentence-BERT, Scikit-learn |
-| Similarity Check  | Cosine Similarity      |
-| Web Search API    | Google Custom Search API |
-| Frontend          | HTML/CSS, Jinja2       |
+| Component         | Technology                         |
+|-------------------|------------------------------------|
+| Backend           | Python, Flask                      |
+| AI Model          | Sentence-BERT, Scikit-learn        |
+| Similarity Check  | Cosine Similarity                  |
+| Web Search API    | Google Custom Search API           |
+| Frontend          | HTML/CSS, Jinja2                   |
 | Deployment        | Localhost / Cloud-ready (GCP, AWS) |
 
 ---
@@ -55,9 +53,11 @@ pip install -r requirements.txt
 ```
 
 3. **Run the App**
+   Within the folder, open your command prompt/terminal, and run the following:
 
 ```
-python app.py
+export FLASK_APP=app
+flask run
 ```
 
 4. **Visit**
@@ -67,10 +67,8 @@ python app.py
 
 ## 📈 Features
 
-* **Upload or Paste Text** for checking
+* **Upload Text** for checking
 * **Paragraph-wise Scores** with matching URLs
-* **Heatmap Visualization** of similarity
-* **Exportable Report** with citations and flagged content
 * **Open-source and Free to Use**
 
 ---
