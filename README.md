@@ -1,5 +1,4 @@
 # AI-Powered-Plagiarism-Detection
-Here's a clean, professional, and informative `README.md` file you can use for your GitHub repository titled:
 
 **"AI-Powered Plagiarism Detection: A Web-Based System for Text Integrity"**
 
@@ -102,7 +101,7 @@ python app.py
 
 If you use this project for academic purposes, please cite the IEEE paper:
 
-> S.M. Vinay Kumar
+> Raghav Purushotham, Rahul Mahato, S.M. Vinay Kumar
 > "AI-Powered Plagiarism Detection: A Web-Based System for Text Integrity",
 > 2025 IEEE, DOI: [10.1109/11036044](https://ieeexplore.ieee.org/document/11036044)
 
